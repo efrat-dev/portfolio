@@ -139,47 +139,51 @@ const technologies = [
 const experiences = [
   {
     title: "Full Stack Developer",
-    company_name: "lift-social startup",
-    icon: starbucks, // תצטרך להוסיף את האייקון המתאים
+    company_name: "Lift – Social Startup",
+    icon: liftIcon, // החלף לאייקון רלוונטי
     iconBg: "#383E56",
     date: "2025",
     points: [
-      "Worked in a Full Stack team, including selecting and implementing tools and technologies tailored to the system's needs.",
-      "Collaborated closely with the DevOps team for integration between system components.",
-      "Combined interdisciplinary skills, including systemic thinking, flexibility, and high self-learning capability.",
+      "Worked as part of a Full Stack development team, including selecting technologies tailored to the system’s needs.",
+      "Collaborated in parallel with the DevOps team to align system integration efforts.",
+      "Applied systemic thinking, flexibility, and strong self-learning capabilities to meet project demands.",
     ],
   },
   {
     title: "ML Blog Platform Developer",
     company_name: "Personal Project",
-    icon: starbucks, // תצטרך להוסיף את האייקון המתאים
+    icon: blogIcon, // החלף לאייקון רלוונטי
     iconBg: "#E6DEDD",
     date: "2025",
     points: [
-      "Built a personal blog platform with Node.js, Angular and MongoDB, showcasing my own machine learning posts.",
-      "Enables full in-browser code editing and live execution via Pyodide, including support for Jupyter notebook rendering.",
-      "Combines content creation with interactive coding for a hands-on learning experience.",
+      "Built an interactive blog platform using Node.js, Angular, and MongoDB to share original AI/ML posts.",
+      "Implemented in-browser code editing and execution with Pyodide, including Jupyter notebook rendering.",
+      "Integrated text-to-speech playback, personal annotations, and content tracking tools.",
+      "Designed for knowledge-sharing and hands-on learning within the tech community.",
     ],
   },
   {
     title: "Full Stack Developer",
     company_name: "ExtraTech",
-    icon: starbucks, // תצטרך להוסיף את האייקון המתאים
+    icon: extratechIcon, // החלף לאייקון רלוונטי
     iconBg: "#383E56",
     date: "2024",
     points: [
-      "Developed an employee management module, as a part of order system, using NestJS, MongoDB, React, and Docker.",
-      "Integrated microservices and ensured code quality with detailed design documents and unit tests.",
-      "Collaborated effectively with the team to meet all requirements.",
+      "Developed an employee management module within a larger business system using NestJS, MongoDB, React, and Docker.",
+      "Integrated with six microservices while maintaining Agile workflows.",
+      "Created detailed design documents ensuring 100% requirement coverage.",
+      "Wrote dozens of unit tests, resulting in zero reported bugs post-deployment.",
+      "Maintained strong ownership and team collaboration throughout the project.",
     ],
   },
 ];
 
+
 const projects = [
   {
-    name: "Full-Stack Application",
+    name: " Education for All – Q&A Platform for Parents and Counselors",
     description:
-      "A comprehensive full-stack application built with React frontend and C# ASP.NET Core backend. Features include Azure Speech Services integration, JWT authentication with Role-Based Access Control (RBAC), SQL Server database management, and SMTP email communication system.",
+      "Education for All is a full-stack platform designed to connect parents with professional educational guidance. Its backend, powered by a secure C# ASP.NET Web API and SQL Server, handles Q&A management, authentication, and real-time counselor responses. On the frontend, a sleek React app enhanced by a built-in FAQ chatbot, audio playback of clustered answers via Azure Speech Services, and voice-based response input.",
     tags: [
       {
         name: "react",
@@ -198,14 +202,40 @@ const projects = [
         color: "orange-text-gradient",
       },
     ],
-    image: education_for_all, // החלף בתמונה מתאימה
-    source_code_link: "https://github.com/efrat-dev", // הכנס את הקישור לקוד שלך
-    demo_link: "https://education-for-all.onrender.com", // הכנס את קישור הדמו שלך
+    image: education_for_all, 
+    source_code_link: "https://github.com/efrat-dev", 
+    demo_link: "https://education-forall.onrender.com", 
   },
   {
-    name: "Extrateck Product Demo",
+    name: "TasteMatch – Recipe Sharing Experience 🍽️",
     description:
-      "A modern web application developed as a product demonstration for Extrateck company. Built using cutting-edge technologies including NestJS for robust backend architecture, React for dynamic user interface, and MongoDB for flexible data management.",
+      "TasteMatch is a vibrant, fully responsive recipe-sharing website crafted with semantic HTML, modern CSS, and Bootstrap. Designed as a front-end showcase, it blends elegant UI design with smooth animations — creating an experience that feels dynamic, even without a backend. Whether you're craving something sweet, savory, or simply stylish code, this project serves up the perfect taste of front-end excellence.",
+    tags: [
+      {
+        name: "html5",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "css3",
+        color: "green-text-gradient",
+      },
+      {
+        name: "bootstrap",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "responsive",
+        color: "orange-text-gradient",
+      },
+    ],
+    image: education_for_all, 
+    source_code_link: "https://github.com/efrat-dev", 
+    demo_link: "https://education-for-all.onrender.com", 
+  },
+  {
+    name: "Next-Gen Developer Showcase",
+    description:
+      "This interactive template was built to present my professional experience and achievements in a striking, user-friendly format. Designed for developers who want to stand out, tell their story visually, and leave a lasting impression — before a single line of code is even read.",
     tags: [
       {
         name: "nestjs",
@@ -220,14 +250,14 @@ const projects = [
         color: "green-text-gradient",
       },
     ],
-    image: fintegrate_demo, // החלף בתמונה מתאימה
-    source_code_link: "https://github.com/efrat-dev/fintegrate-demo", // הכנס את הקישור לקוד שלך
-    demo_link: "https://extrateck-demo.com", // הכנס את קישור הדמו שלך
+    image: fintegrate_demo, 
+    source_code_link: "https://github.com/efrat-dev/fintegrate-demo", 
+    demo_link: "https://extrateck-demo.com",
   },
   {
     name: "Creating AI - Learning Platform & Blog",
     description:
-      "A comprehensive learning platform and blog focused on AI and technology education. Developed using Node.js backend, JavaScript for interactive functionality, and Angular for a dynamic single-page application experience. Provides educational content and resources for AI enthusiasts.",
+    "Creating AI is an interactive learning platform and personal tech blog, built to document and share my hands-on journey into AI and data science. It features live code editing, in-browser execution, and notebook-style rendering for a dynamic, immersive experience. Built with Node.js, JavaScript, and Angular, it transforms static content into an engaging space for exploration. Perfect for developers who want to learn by doing — not just reading.",
     tags: [
       {
         name: "nodejs",
@@ -239,6 +269,62 @@ const projects = [
       },
       {
         name: "angular",
+        color: "red-text-gradient",
+      },
+      {
+        name: "ai & ml ",
+        color: "red-text-gradient",
+      },
+    ],
+    image: creating_ai, // החלף בתמונה מתאימה
+    source_code_link: "https://github.com/efrat-dev/creating-ai-blog", // הכנס את הקישור לקוד שלך
+    demo_link: "https://creatingai.onrender.com",
+  },
+  {
+    name: "Creating AI - Learning Platform & Blog",
+    description:
+    "A vibrant collection of mini-games — each one offering a different flavor of fun, challenge, and creativity. Small games, big impact. Don't miss our flagship - Mastermind! Sharpen your logic by cracking a secret sequence of colors, complete with difficulty levels, live timer, and high-score tracking. Other games: Triluck – A colorful slot machine. Brush Rush – Your personal pixel-art playground.",
+    tags: [
+      {
+        name: "nodejs",
+        color: "green-text-gradient",
+      },
+      {
+        name: "javascript",
+        color: "yellow-text-gradient",
+      },
+      {
+        name: "angular",
+        color: "red-text-gradient",
+      },
+      {
+        name: "ai & ml ",
+        color: "red-text-gradient",
+      },
+    ],
+    image: creating_ai, // החלף בתמונה מתאימה
+    source_code_link: "https://github.com/efrat-dev/creating-ai-blog", // הכנס את הקישור לקוד שלך
+    demo_link: "https://creatingai.onrender.com",
+  },
+  {
+    name: "Creating AI - Learning Platform & Blog",
+    description:
+    "A sleek, web-based platform that showcases my structured LeetCode solutions — searchable, categorized by topic and difficulty, and beautifully organized for clarity and efficiency. Built for interview prep and daily revision, it combines clean UI with interactive browsing, turning a personal coding journey into a polished learning tool.",
+    tags: [
+      {
+        name: "nodejs",
+        color: "green-text-gradient",
+      },
+      {
+        name: "javascript",
+        color: "yellow-text-gradient",
+      },
+      {
+        name: "angular",
+        color: "red-text-gradient",
+      },
+      {
+        name: "ai & ml ",
         color: "red-text-gradient",
       },
     ],
