@@ -16,58 +16,59 @@ const Contact = () => {
   });
 
   const [loading, setLoading] = useState(false);
+  const [feedback, setFeedback] = useState(null); // { type: "success" | "error", message: string }
 
   const handleChange = (e) => {
-    const { target } = e;
-    const { name, value } = target;
-
-    setForm({
-      ...form,
-      [name]: value,
-    });
+    const { name, value } = e.target;
+    setForm((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
+    setFeedback(null);
 
-    emailjs
-      .send(
+    const { name, email, message } = form;
+
+    if (!name || !email || !message) {
+      setFeedback({ type: "error", message: "Please fill in all fields." });
+      setLoading(false);
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      setFeedback({ type: "error", message: "Please enter a valid email address." });
+      setLoading(false);
+      return;
+    }
+
+    try {
+      await emailjs.send(
         import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         {
-          from_name: form.name,
+          from_name: name,
           to_name: "Efrat Bdil",
-          from_email: form.email,
+          from_email: email,
           to_email: "efrat.developer@gmail.com",
-          message: form.message,
+          message: message,
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-      )
-      .then(
-        () => {
-          setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
-
-          setForm({
-            name: "",
-            email: "",
-            message: "",
-          });
-        },
-        (error) => {
-          setLoading(false);
-          console.error(error);
-
-          alert("Ahh, something went wrong. Please try again.");
-        }
       );
+
+      setFeedback({ type: "success", message: "Thank you. I will get back to you as soon as possible." });
+      setForm({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error(error);
+      setFeedback({ type: "error", message: "Something went wrong. Please try again." });
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
-    <div
-      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
-    >
+    <div className='xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden'>
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
         className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
@@ -80,45 +81,60 @@ const Contact = () => {
           onSubmit={handleSubmit}
           className='mt-12 flex flex-col gap-8'
         >
-          <label className='flex flex-col'>
+          <label htmlFor='name' className='flex flex-col'>
             <span className='text-white font-medium mb-4'>Your Name</span>
             <input
+              id='name'
               type='text'
               name='name'
               value={form.name}
               onChange={handleChange}
-              placeholder="What's your good name?"
+              placeholder='Enter your name'
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
             />
           </label>
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your email</span>
+
+          <label htmlFor='email' className='flex flex-col'>
+            <span className='text-white font-medium mb-4'>Your Email</span>
             <input
+              id='email'
               type='email'
               name='email'
               value={form.email}
               onChange={handleChange}
-              placeholder="What's your web address?"
+              placeholder='Enter your email address'
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
             />
           </label>
-          <label className='flex flex-col'>
+
+          <label htmlFor='message' className='flex flex-col'>
             <span className='text-white font-medium mb-4'>Your Message</span>
             <textarea
+              id='message'
               rows={7}
               name='message'
               value={form.message}
               onChange={handleChange}
-              placeholder='What you want to say?'
+              placeholder='What do you want to say?'
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
             />
           </label>
+
+          {feedback && (
+            <p
+              className={`text-sm ${
+                feedback.type === "success" ? "text-green-400" : "text-red-500"
+              }`}
+            >
+              {feedback.message}
+            </p>
+          )}
 
           <button
             type='submit'
             className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
           >
-            {loading ? "Sending..." : "Send"}
+            {loading ? "Sending..." : "Send Message"}
           </button>
         </form>
       </motion.div>
