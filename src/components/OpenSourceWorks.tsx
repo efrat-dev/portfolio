@@ -109,19 +109,6 @@ const OpenSourceWorks = () => {
         <h2 className={`${styles.sectionHeadText}`}>Open Source Projects.</h2>
       </motion.div>
 
-      <div className='w-full flex'>
-        <motion.p
-          variants={fadeIn("", "", 0.1, 1)}
-          className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
-        >
-          Creating open source solutions is a core part of my development approach. 
-          These projects represent my original contributions to the developer community, 
-          from Python packages published on PyPI to innovative tools and libraries. 
-          Each project reflects my passion for solving real-world problems and 
-          sharing solutions that help other developers build better applications.
-        </motion.p>
-      </div>
-
       <div className='mt-20 flex flex-wrap gap-7'>
         {openSourceProjects.map((project, index) => (
           <OpenSourceProjectCard key={`opensource-${index}`} index={index} {...project} />
