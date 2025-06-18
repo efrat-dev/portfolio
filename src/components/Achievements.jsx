@@ -70,7 +70,7 @@ const Achievements = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} `}>My Achievements</p>
+        <p className={`${styles.sectionSubText} `}>Achievement Unlocked</p>
         <h2 className={`${styles.sectionHeadText}`}>Certifications.</h2>
       </motion.div>
       <div className='mt-20 flex flex-wrap gap-7'>

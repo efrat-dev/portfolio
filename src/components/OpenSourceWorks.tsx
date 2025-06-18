@@ -105,7 +105,7 @@ const OpenSourceWorks = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText}`}>What I Create</p>
+        <p className={`${styles.sectionSubText}`}>Impact Zone</p>
         <h2 className={`${styles.sectionHeadText}`}>Open Source Projects.</h2>
       </motion.div>
 
