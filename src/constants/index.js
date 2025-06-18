@@ -54,7 +54,15 @@ export const navLinks = [
   },
   {
     id: "certificates",
-    title: "Certs",
+    title: "Certificates",
+  },
+  {
+    id: "certificates",
+    title: "Certificates",
+  },
+  {
+    id: "opensource",
+    title: "Open Source",
   },
   {
     id: "contact",
@@ -140,7 +148,7 @@ const experiences = [
   {
     title: "Full Stack Developer",
     company_name: "Lift – Social Startup",
-    icon: liftIcon, // החלף לאייקון רלוונטי
+    icon: starbucks, // החלף לאייקון רלוונטי
     iconBg: "#383E56",
     date: "2025",
     points: [
@@ -152,7 +160,7 @@ const experiences = [
   {
     title: "ML Blog Platform Developer",
     company_name: "Personal Project",
-    icon: blogIcon, // החלף לאייקון רלוונטי
+    icon: starbucks, // החלף לאייקון רלוונטי
     iconBg: "#E6DEDD",
     date: "2025",
     points: [
@@ -165,7 +173,7 @@ const experiences = [
   {
     title: "Full Stack Developer",
     company_name: "ExtraTech",
-    icon: extratechIcon, // החלף לאייקון רלוונטי
+    icon: starbucks, // החלף לאייקון רלוונטי
     iconBg: "#383E56",
     date: "2024",
     points: [
@@ -426,4 +434,73 @@ const contactInfo = [
   }
 ];
 
-export { services, technologies, experiences, projects, certifications, contactInfo  };
+const openSourceProjects = [
+  {
+    name: "DataFlow Analyzer",
+    description:
+      "A Python package for analyzing and visualizing data flow patterns in complex datasets. Provides intuitive APIs for data scientists and includes built-in plotting capabilities with customizable themes.",
+    tags: [
+      {
+        name: "python",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "data-science",
+        color: "green-text-gradient",
+      },
+      {
+        name: "visualization",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=230&fit=crop&crop=center",
+    source_code_link: "https://github.com/your-username/dataflow-analyzer",
+    pypi_link: "https://pypi.org/project/dataflow-analyzer/",
+  },
+  {
+    name: "React Form Validator",
+    description:
+      "A lightweight React library for form validation with TypeScript support. Features declarative validation rules, custom error messages, and seamless integration with popular UI frameworks.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "typescript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "forms",
+        color: "green-text-gradient",
+      },
+    ],
+    image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400&h=230&fit=crop&crop=center",
+    source_code_link: "https://github.com/your-username/react-form-validator",
+    // No pypi_link for JavaScript projects
+  },
+  {
+    name: "Config Manager CLI",
+    description:
+      "A command-line tool for managing application configurations across different environments. Supports JSON, YAML, and TOML formats with encryption and template features.",
+    tags: [
+      {
+        name: "python",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "cli",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "devtools",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: "https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=400&h=230&fit=crop&crop=center",
+    source_code_link: "https://github.com/your-username/config-manager-cli",
+    pypi_link: "https://pypi.org/project/config-manager-cli/",
+  },
+];
+
+export { services, technologies, experiences, projects, certifications, contactInfo, openSourceProjects  };

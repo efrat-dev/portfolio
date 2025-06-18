@@ -9,7 +9,7 @@ import Achievements from './Achievements';
 import Contact from "./Contact";
 import Footer from "./Footer"
 import CanvasLoader from "./Loader";
-
+import OpenSourceWorks from './OpenSourceWorks';
 
 export {
   Navbar,
@@ -23,5 +23,6 @@ export {
   CanvasLoader,
   EarthCanvas, 
   StarsCanvas,
-  Footer
+  Footer,
+  OpenSourceWorks
 };
