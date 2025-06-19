@@ -103,10 +103,10 @@ const LearningResourcesSection = () => {
         className="text-center mb-8"
       >
         <h3 className="text-[#915eff] font-medium text-[18px] uppercase tracking-wider">
-          Educational Resources
+        Learning Engineer
         </h3>
         <h2 className="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px] mt-2">
-          Knowledge Base
+          Knowledge Hub
         </h2>
       </motion.div>
       
@@ -146,8 +146,8 @@ const MLDeepLearningSection = () => {
         className="text-center mb-8"
       >
         <h3 className="text-[#915eff] font-medium text-[18px] uppercase tracking-wider">
-          Advanced Analytics
-        </h3>
+        Data Alchemist
+                </h3>
         <h2 className="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px] mt-2">
           ML & Deep Learning
         </h2>
@@ -189,8 +189,8 @@ const LLMProjectsSection = () => {
         className="text-center mb-8"
       >
         <h3 className="text-[#915eff] font-medium text-[18px] uppercase tracking-wider">
-          Language Intelligence
-        </h3>
+        Prompt Whisperer
+                </h3>
         <h2 className="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px] mt-2">
           LLM & NLP
         </h2>
@@ -232,7 +232,7 @@ const DataScience = () => {
         className="text-center mb-10"
       >
         <p className="text-[#915eff] font-medium text-[18px] uppercase tracking-wider">
-          Insights & Analytics
+          I & AI
         </p>
         <h2 className="text-white font-black md:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] mt-2">
           Data Science.
@@ -245,25 +245,11 @@ const DataScience = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="text-center text-secondary text-[18px] max-w-4xl mx-auto leading-[32px]"
       >
-        My journey in the world of Data Science, artificial intelligence research, and developing intelligent solutions based on data-driven insights
+        My journey in the world of Data Science, artificial intelligence, and developing intelligent solutions based on data-driven insights
       </motion.p>
 
       {/* AI & Intelligence Section */}
       <div className="mt-24">
-        <motion.div
-          initial="hidden"
-          animate="show"
-          variants={textVariant()}
-          className="text-center mb-8"
-        >
-          <h3 className="text-[#915eff] font-medium text-[18px] uppercase tracking-wider">
-            Future Technology
-          </h3>
-          <h2 className="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px] mt-2">
-            AI & Intelligence
-          </h2>
-        </motion.div>
-        
         <motion.p 
           initial="hidden"
           animate="show"
@@ -279,6 +265,16 @@ const DataScience = () => {
 
       {/* ML & Deep Learning Projects */}
       <MLDeepLearningSection />
+
+{/* Bridging LLMs and Data Science */}
+<motion.div
+  initial="hidden"
+  animate="show"
+  variants={fadeIn("", "", 0.1, 1)}
+  className="text-center text-secondary text-[17px] max-w-4xl mx-auto mt-20 leading-[30px]"
+>
+  Building with LLMs is more than just calling an API. It’s a data-centric challenge that requires analytical thinking, thoughtful evaluation, and intelligent orchestration. With a Data Science mindset, I transform language models into insight engines—driven by structured data, optimized prompts, and meaningful outcomes.
+</motion.div>
 
       {/* LLM Projects */}
       <LLMProjectsSection />
