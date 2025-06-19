@@ -179,47 +179,48 @@ const MLDeepLearningSection = () => {
 };
 
 // Component for LLM projects
+// Component for LLM projects - עם ID ייחודי
 const LLMProjectsSection = () => {
-  return (
-    <div className="mt-20">
-      <motion.div
-        initial="hidden"
-        animate="show"
-        variants={textVariant()}
-        className="text-center mb-8"
-      >
-        <h3 className="text-[#915eff] font-medium text-[18px] uppercase tracking-wider">
-        Prompt Whisperer
-                </h3>
-        <h2 className="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px] mt-2">
-          LLM & NLP
-        </h2>
-      </motion.div>
-      
-      <motion.p 
-        initial="hidden"
-        animate="show"
-        variants={fadeIn("", "", 0.1, 1)}
-        className="text-center text-secondary text-[17px] max-w-3xl mx-auto leading-[30px]"
-      >
-        Projects with Large Language Models, LangChain, and advanced NLP applications
-      </motion.p>
-
-      <div className='mt-12 flex flex-wrap gap-7 justify-center'>
-        {llmProjects.map((project, index) => (
-          <motion.div 
-            key={`llm-${index}`}
-            initial="hidden"
-            animate="show"
-            variants={fadeIn("up", "spring", index * 0.5, 0.75)}
-          >
-            <DataProjectCard index={index} {...project} />
-          </motion.div>
-        ))}
+    return (
+      <div className="mt-20" id="llm-section">
+        <motion.div
+          initial="hidden"
+          animate="show"
+          variants={textVariant()}
+          className="text-center mb-8"
+        >
+          <h3 className="text-[#915eff] font-medium text-[18px] uppercase tracking-wider">
+          Prompt Whisperer
+          </h3>
+          <h2 className="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px] mt-2">
+            LLM & NLP
+          </h2>
+        </motion.div>
+        
+        <motion.p 
+          initial="hidden"
+          animate="show"
+          variants={fadeIn("", "", 0.1, 1)}
+          className="text-center text-secondary text-[17px] max-w-3xl mx-auto leading-[30px]"
+        >
+          Projects with Large Language Models, LangChain, and advanced NLP applications
+        </motion.p>
+  
+        <div className='mt-12 flex flex-wrap gap-7 justify-center'>
+          {llmProjects.map((project, index) => (
+            <motion.div 
+              key={`llm-${index}`}
+              initial="hidden"
+              animate="show"
+              variants={fadeIn("up", "spring", index * 0.5, 0.75)}
+            >
+              <DataProjectCard index={index} {...project} />
+            </motion.div>
+          ))}
+        </div>
       </div>
-    </div>
-  );
-};
+    );
+  };
 
 // Main component
 const DataScience = () => {
