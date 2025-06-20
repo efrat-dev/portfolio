@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
@@ -12,8 +12,8 @@ import cvFile from "../assets/cv.pdf";
 // אייקון הורדה SVG חמוד
 const DownloadIcon = ({ isHovered }) => (
   <svg 
-    width="32" 
-    height="32" 
+    width="24" 
+    height="24" 
     viewBox="0 0 24 24" 
     fill="none" 
     className={`transition-all duration-300 ${isHovered ? 'scale-110' : 'scale-100'}`}
@@ -38,22 +38,11 @@ const DownloadIcon = ({ isHovered }) => (
       animate={{ pathLength: isHovered ? 1 : 0.8 }}
       transition={{ duration: 0.3, delay: 0.1 }}
     />
-    {isHovered && (
-      <motion.circle
-        cx="12"
-        cy="12"
-        r="1"
-        fill="currentColor"
-        initial={{ scale: 0, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 0.2, delay: 0.2 }}
-      />
-    )}
   </svg>
 );
 
-// רכיב כרטיס הורדת קו"ח
-const CVDownloadCard = ({ index }) => {
+// רכיב כפתור הורדת קו"ח מחודש
+const CVDownloadButton = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleDownload = () => {
@@ -62,64 +51,69 @@ const CVDownloadCard = ({ index }) => {
   };
 
   return (
-    <Tilt className='xs:w-[120px] w-full'>
-      <motion.div
-        variants={fadeIn("up", "spring", index * 0.2, 0.5)}
-        className='w-full violet-gradient p-[1px] rounded-[12px] shadow-card cursor-pointer'
+    <div className="flex justify-center mb-12">
+      <motion.button
         onClick={handleDownload}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
+        className="relative group"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.8 }}
       >
-        <div className='bg-tertiary rounded-[12px] py-3 px-4 min-h-[100px] flex justify-center items-center flex-col hover:bg-[#151030] transition-all duration-300 group relative overflow-hidden'>
+        {/* רקע עם גרדיאנט */}
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl blur opacity-75 group-hover:opacity-100 transition-opacity duration-300"></div>
+        
+        {/* הכפתור עצמו */}
+        <div className="relative bg-[#1a1a2e] border border-purple-500/30 rounded-xl px-8 py-4 flex items-center gap-3 hover:border-purple-400/60 transition-all duration-300">
           
-          {/* אפקט זוהר ברקע */}
+          {/* אפקט זוהר פנימי */}
           <motion.div 
-            className="absolute inset-0 bg-gradient-to-r from-purple-400/10 to-pink-400/10 rounded-[12px]"
+            className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-xl"
             initial={{ opacity: 0 }}
             animate={{ opacity: isHovered ? 1 : 0 }}
             transition={{ duration: 0.3 }}
           />
           
-          {/* אייקון הורדה */}
-          <div className="relative z-10 text-white mb-2">
+          {/* אייקון */}
+          <div className="relative z-10 text-white">
             <DownloadIcon isHovered={isHovered} />
           </div>
 
           {/* טקסט */}
-          <motion.h4 
-            className='text-white text-[14px] font-medium text-center relative z-10'
+          <motion.span 
+            className='text-white text-[16px] font-semibold relative z-10'
             animate={{ 
-              color: isHovered ? '#a855f7' : '#ffffff',
-              scale: isHovered ? 1.05 : 1 
+              color: isHovered ? '#a855f7' : '#ffffff'
             }}
             transition={{ duration: 0.2 }}
           >
-            Resume
-          </motion.h4>
+            Download Resume
+          </motion.span>
 
           {/* חלקיקים מתנועעים */}
           {isHovered && (
             <>
-              {[...Array(6)].map((_, i) => (
+              {[...Array(8)].map((_, i) => (
                 <motion.div
                   key={i}
                   className="absolute w-1 h-1 bg-purple-400 rounded-full"
                   initial={{ 
-                    x: Math.random() * 80 + 20, 
-                    y: Math.random() * 80 + 20,
+                    x: Math.random() * 160 + 20, 
+                    y: Math.random() * 40 + 10,
                     opacity: 0 
                   }}
                   animate={{ 
-                    y: [null, -10, 10],
+                    y: [null, -15, 15],
                     opacity: [0, 1, 0],
-                    scale: [0, 1, 0]
+                    scale: [0, 1.5, 0]
                   }}
                   transition={{ 
-                    duration: 2,
+                    duration: 2.5,
                     repeat: Infinity,
-                    delay: i * 0.2,
+                    delay: i * 0.3,
                     ease: "easeInOut"
                   }}
                 />
@@ -127,12 +121,12 @@ const CVDownloadCard = ({ index }) => {
             </>
           )}
         </div>
-      </motion.div>
-    </Tilt>
+      </motion.button>
+    </div>
   );
 };
 
-const ContactCard = ({ index, title, icon, link, type }) => {
+const ContactCard = ({ index, title, icon, link, type, isVisible }) => {
   const handleClick = () => {
     if (type === "scroll") {
       // גלילה לחלק הקונטקט
@@ -148,7 +142,9 @@ const ContactCard = ({ index, title, icon, link, type }) => {
   return (
     <Tilt className='xs:w-[120px] w-full'>
       <motion.div
-        variants={fadeIn("up", "spring", index * 0.2, 0.5)}
+        initial={{ opacity: 0, y: 50 }}
+        animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+        transition={{ duration: 0.5, delay: index * 0.2 }}
         className='w-full violet-gradient p-[1px] rounded-[12px] shadow-card cursor-pointer'
         onClick={handleClick}
       >
@@ -215,6 +211,32 @@ const ServiceCard = ({ index, title, icon, link }) => {
 };
 
 const Home = () => {
+  const [contactVisible, setContactVisible] = useState(false);
+  const contactRef = useRef(null);
+
+  // Hook לזיהוי גלילה לכרטיסי הקונטקט
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setContactVisible(true);
+        }
+      },
+      {
+        threshold: 0.3, // האנימציה תתחיל כאשר 30% מהסקשן נראה
+      }
+    );
+
+    if (contactRef.current) {
+      observer.observe(contactRef.current);
+    }
+
+    return () => {
+      if (contactRef.current) {
+        observer.unobserve(contactRef.current);
+      }
+    };
+  }, []);
   return (
     <>
       {/* רקע על כל הרוחב - מחוץ ל-wrapper */}
@@ -255,18 +277,25 @@ const Home = () => {
           ))}
         </div>
 
+        {/* כפתור הורדת קו"ח - נפרד ומעוצב */}
+        <div className="mt-16">
+          <CVDownloadButton />
+        </div>
+
         {/* Contact Cards Section */}
-        <div className='mt-16'>
-          <h3 className='text-white text-[24px] font-bold text-center mb-8'>
-          Find Me Online
-                    </h3>
+        <div className='mt-8' ref={contactRef}>
+          <motion.h3 
+            className='text-white text-[24px] font-bold text-center mb-8'
+            initial={{ opacity: 0, y: -20 }}
+            animate={contactVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
+            transition={{ duration: 0.6 }}
+          >
+            Find Me Online
+          </motion.h3>
           <div className='flex flex-wrap gap-4 justify-center'>
-            {/* כרטיס הורדת קו"ח */}
-            <CVDownloadCard index={0} />
-            
-            {/* שאר כרטיסי הקונטקט */}
+            {/* רק כרטיסי הקונטקט */}
             {contactInfo.map((contact, index) => (
-              <ContactCard key={contact.title} index={index + 1} {...contact} />
+              <ContactCard key={contact.title} index={index} isVisible={contactVisible} {...contact} />
             ))}
           </div>
         </div>
