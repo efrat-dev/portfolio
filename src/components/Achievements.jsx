@@ -69,11 +69,12 @@ const CertificationCard = ({
 const Achievements = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} `}>Achievement Unlocked</p>
-        <h2 className={`${styles.sectionHeadText}`}>Certifications.</h2>
+      <motion.div variants={textVariant()} className="text-center mb-10">
+        <p className="text-[#915eff] font-medium text-[18px] uppercase tracking-wider">Achievement Unlocked</p>
+        <h2 className="text-white font-black md:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] mt-2">Certifications.</h2>
       </motion.div>
-      <div className='mt-20 flex flex-wrap gap-7'>
+      
+      <div className='mt-20 flex flex-wrap gap-7 justify-center'>
         {certifications.map((certification, index) => (
           <CertificationCard key={`certification-${index}`} index={index} {...certification} />
         ))}

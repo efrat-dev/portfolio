@@ -6,6 +6,7 @@ import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 import { blogPosts } from "../constants";
+
 const BlogCard = ({ index, title, description, readTime, date, category, url, image, onClick }) => {
   const handleClick = () => {
     onClick(url);
@@ -27,9 +28,11 @@ const BlogCard = ({ index, title, description, readTime, date, category, url, im
           />
 
           {/* Hover Overlay */}
-          <div className='absolute inset-0 bg-white bg-opacity-80 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center'>
-            <h3 className='text-black font-bold text-[18px] mb-2'>Read Post</h3>
-            <div className='text-black text-[24px]'>→</div>
+          <div className='absolute inset-0 bg-white bg-opacity-60 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center'>
+            <div className='flex items-center gap-2'>
+              <h3 className='text-black font-bold text-[18px]'>Read Post</h3>
+              <div className='text-black text-[24px]'>→</div>
+            </div>
           </div>
 
           {/* Category Badge */}
@@ -140,31 +143,33 @@ const Blog = () => {
 
   return (
     <>
-      <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText}`}>Content Architect</p>
-        <h2 className={`${styles.sectionHeadText}`}>Creating AI Blog.</h2>
+      <motion.div variants={textVariant()} className="text-center mb-10">
+        <p className="text-[#915eff] font-medium text-[18px] uppercase tracking-wider">Content Architect</p>
+        <h2 className="text-white font-black md:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] mt-2">Creating AI Blog.</h2>
       </motion.div>
 
-      <motion.p
-        variants={fadeIn("", "", 0.1, 1)}
-        className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
-      >
-        <span className="text-white font-semibold text-[19px] block mb-4">
-          "Teaching is the highest form of understanding."
-        </span>
-        
-        My blog is where theory meets practice — a space where I document my journey through AI, 
-        machine learning, and software development. Each post combines rigorous technical analysis 
-        with hands-on implementation, creating resources that serve both as learning material and 
-        practical reference guides.
-        <br /><br />
-        From deep dives into transformer architectures to practical MLOps pipelines, I believe in 
-        sharing knowledge that empowers others to build, learn, and innovate. Every article includes 
-        interactive code examples, detailed explanations, and real-world applications.
-      </motion.p>
+      <div className="flex justify-center">
+        <motion.p
+          variants={fadeIn("", "", 0.1, 1)}
+          className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px] text-justify'
+        >
+          <span className="text-white font-semibold text-[19px] block mb-4 text-center">
+            "Teaching is the highest form of understanding."
+          </span>
+          
+          My blog is where theory meets practice — a space where I document my journey through AI, 
+          machine learning, and software development. Each post combines rigorous technical analysis 
+          with hands-on implementation, creating resources that serve both as learning material and 
+          practical reference guides.
+          <br /><br />
+          From deep dives into transformer architectures to practical MLOps pipelines, I believe in 
+          sharing knowledge that empowers others to build, learn, and innovate. Every article includes 
+          interactive code examples, detailed explanations, and real-world applications.
+        </motion.p>
+      </div>
 
       {/* View Toggle and Visit Blog Button */}
-      <div className='mt-8 flex justify-between items-center flex-wrap gap-4'>
+      <div className='mt-8 flex justify-center items-center flex-wrap gap-4'>
         <ViewToggle isListView={isListView} onToggle={setIsListView} />
         
         <motion.button

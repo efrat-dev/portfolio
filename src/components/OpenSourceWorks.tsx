@@ -104,12 +104,12 @@ const OpenSourceProjectCard = ({
 const OpenSourceWorks = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText}`}>Impact Zone</p>
-        <h2 className={`${styles.sectionHeadText}`}>Open Source Projects.</h2>
+      <motion.div variants={textVariant()} className="text-center mb-10">
+        <p className="text-[#915eff] font-medium text-[18px] uppercase tracking-wider">Impact Zone</p>
+        <h2 className="text-white font-black md:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] mt-2">Open Source Projects.</h2>
       </motion.div>
 
-      <div className='mt-20 flex flex-wrap gap-7'>
+      <div className='mt-20 flex flex-wrap gap-7 justify-center'>
         {openSourceProjects.map((project, index) => (
           <OpenSourceProjectCard key={`opensource-${index}`} index={index} {...project} />
         ))}

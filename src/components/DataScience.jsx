@@ -74,7 +74,7 @@ const DataProjectCard = ({
 
         <div className='mt-5'>
           <h3 className='text-white font-bold text-[24px]'>{name}</h3>
-          <p className='mt-2 text-secondary text-[14px]'>{description}</p>
+          <p className='mt-2 text-secondary text-[14px] text-justify'>{description}</p>
         </div>
 
         <div className='mt-4 flex flex-wrap gap-2'>
@@ -114,7 +114,7 @@ const LearningResourcesSection = () => {
         initial="hidden"
         animate="show"
         variants={fadeIn("", "", 0.1, 1)}
-        className="text-center text-secondary text-[17px] max-w-3xl mx-auto leading-[30px]"
+        className="text-justify text-secondary text-[17px] max-w-3xl mx-auto leading-[30px]"
       >
         Summaries, tutorials, and learning materials I've created throughout my journey in the Data Science world
       </motion.p>
@@ -149,7 +149,7 @@ const MLDeepLearningSection = () => {
         Data Alchemist
                 </h3>
         <h2 className="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px] mt-2">
-          ML & Deep Learning
+          Machine & Deep Learning
         </h2>
       </motion.div>
       
@@ -157,9 +157,9 @@ const MLDeepLearningSection = () => {
         initial="hidden"
         animate="show"
         variants={fadeIn("", "", 0.1, 1)}
-        className="text-center text-secondary text-[17px] max-w-3xl mx-auto leading-[30px]"
+        className="text-justify text-secondary text-[17px] max-w-3xl mx-auto leading-[30px]"
       >
-        Projects in research and implementation of Machine Learning and Deep Learning algorithms
+        Projects in implementation of Machine Learning and Deep Learning algorithms
       </motion.p>
 
       <div className='mt-12 flex flex-wrap gap-7 justify-center'>
@@ -201,11 +201,12 @@ const LLMProjectsSection = () => {
           initial="hidden"
           animate="show"
           variants={fadeIn("", "", 0.1, 1)}
-          className="text-center text-secondary text-[17px] max-w-3xl mx-auto leading-[30px]"
+          className="text-justify text-secondary text-[17px] max-w-3xl mx-auto leading-[30px]"
         >
-          Projects with Large Language Models, LangChain, and advanced NLP applications
+          Projects with Large Language Models, LangChain, and advanced NLP applications. <br /><br />
+          Building with LLMs is more than just calling an API. It's a data-centric challenge that requires analytical thinking, thoughtful evaluation, and intelligent orchestration. With a Data Science mindset, I transform language models into insight engines—driven by structured data, optimized prompts, and meaningful outcomes.
         </motion.p>
-  
+
         <div className='mt-12 flex flex-wrap gap-7 justify-center'>
           {llmProjects.map((project, index) => (
             <motion.div 
@@ -244,38 +245,17 @@ const DataScience = () => {
         initial="hidden"
         animate="show"
         variants={fadeIn("", "", 0.1, 1)}
-        className="text-center text-secondary text-[18px] max-w-4xl mx-auto leading-[32px]"
+        className="text-justify text-secondary text-[18px] max-w-4xl mx-auto leading-[32px]"
       >
-        My journey in the world of Data Science, artificial intelligence, and developing intelligent solutions based on data-driven insights
+        My journey in the world of Data Science, artificial intelligence, and developing intelligent solutions based on data-driven insights. <br/> <br />
+        My fascination with Artificial Intelligence goes beyond curiosity—it's a deep appreciation for the profound intelligence and innovation at the heart of this transformative field. I'm captivated by algorithms that learn, adapt, and solve complex problems in ways that mirror human cognition. By investing in AI technologies today, I'm building the foundation for tomorrow's innovations and shaping the intelligent future we're heading toward.
       </motion.p>
-
-      {/* AI & Intelligence Section */}
-      <div className="mt-24">
-        <motion.p 
-          initial="hidden"
-          animate="show"
-          variants={fadeIn("", "", 0.1, 1)}
-          className="text-center text-secondary text-[17px] max-w-4xl mx-auto leading-[30px]"
-        >
-          My fascination with Artificial Intelligence goes beyond curiosity—it's a deep appreciation for the profound intelligence and innovation at the heart of this transformative field. I'm captivated by algorithms that learn, adapt, and solve complex problems in ways that mirror human cognition. By investing in AI technologies today, I'm building the foundation for tomorrow's innovations and shaping the intelligent future we're heading toward.
-        </motion.p>
-      </div>
 
       {/* Learning Resources */}
       <LearningResourcesSection />
 
       {/* ML & Deep Learning Projects */}
       <MLDeepLearningSection />
-
-{/* Bridging LLMs and Data Science */}
-<motion.div
-  initial="hidden"
-  animate="show"
-  variants={fadeIn("", "", 0.1, 1)}
-  className="text-center text-secondary text-[17px] max-w-4xl mx-auto mt-20 leading-[30px]"
->
-  Building with LLMs is more than just calling an API. It’s a data-centric challenge that requires analytical thinking, thoughtful evaluation, and intelligent orchestration. With a Data Science mindset, I transform language models into insight engines—driven by structured data, optimized prompts, and meaningful outcomes.
-</motion.div>
 
       {/* LLM Projects */}
       <LLMProjectsSection />

@@ -242,8 +242,6 @@ const TechCard = ({ technology, index }) => {
   );
 };
 
-
-
 const Tech = () => {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -253,11 +251,11 @@ const Tech = () => {
 
   return (
     <>
-      <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} text-center`}>
-        Skills Initialized
-                </p>
-        <h2 className={`${styles.sectionHeadText} text-center`}>
+      <motion.div variants={textVariant()} className="text-center mb-10">
+        <p className="text-[#915eff] font-medium text-[18px] uppercase tracking-wider">
+          Skills Initialized
+        </p>
+        <h2 className="text-white font-black md:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] mt-2">
           Tech Stack.
         </h2>
       </motion.div>
@@ -301,7 +299,7 @@ const Tech = () => {
           ))}
         </div>
         
-        {/* רשת הטכנולוגיות */}
+        {/* רשת הטכנולוגיות - ממורכזת */}
         <div className="flex flex-row flex-wrap justify-center gap-12 relative z-10">
           {technologies.map((technology, index) => (
             <TechCard

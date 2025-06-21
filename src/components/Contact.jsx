@@ -73,8 +73,10 @@ const Contact = () => {
         variants={slideIn("left", "tween", 0.2, 1)}
         className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
       >
-        <p className={styles.sectionSubText}>Connection Protocol</p>
-        <h3 className={styles.sectionHeadText}>Contact.</h3>
+        <div className="text-center">
+          <p className={`${styles.sectionSubText} text-[#915eff]`}>Connection Protocol</p>
+          <h3 className={styles.sectionHeadText}>Contact.</h3>
+        </div>
 
         <form
           ref={formRef}
@@ -82,7 +84,7 @@ const Contact = () => {
           className='mt-12 flex flex-col gap-8'
         >
           <label htmlFor='name' className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Name</span>
+            <span className='text-white font-medium mb-4 text-center'>Your Name</span>
             <input
               id='name'
               type='text'
@@ -90,12 +92,12 @@ const Contact = () => {
               value={form.name}
               onChange={handleChange}
               placeholder='Enter your name'
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium text-center'
             />
           </label>
 
           <label htmlFor='email' className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Email</span>
+            <span className='text-white font-medium mb-4 text-center'>Your Email</span>
             <input
               id='email'
               type='email'
@@ -103,12 +105,12 @@ const Contact = () => {
               value={form.email}
               onChange={handleChange}
               placeholder='Enter your email address'
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium text-center'
             />
           </label>
 
           <label htmlFor='message' className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Message</span>
+            <span className='text-white font-medium mb-4 text-center'>Your Message</span>
             <textarea
               id='message'
               rows={7}
@@ -116,13 +118,13 @@ const Contact = () => {
               value={form.message}
               onChange={handleChange}
               placeholder='What do you want to say?'
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium text-center'
             />
           </label>
 
           {feedback && (
             <p
-              className={`text-sm ${
+              className={`text-sm text-center ${
                 feedback.type === "success" ? "text-green-400" : "text-red-500"
               }`}
             >
@@ -130,12 +132,14 @@ const Contact = () => {
             </p>
           )}
 
-          <button
-            type='submit'
-            className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
-          >
-            {loading ? "Sending..." : "Send Message"}
-          </button>
+          <div className="flex justify-center">
+            <button
+              type='submit'
+              className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
+            >
+              {loading ? "Sending..." : "Send Message"}
+            </button>
+          </div>
         </form>
       </motion.div>
 
