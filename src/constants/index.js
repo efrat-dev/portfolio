@@ -22,6 +22,9 @@ import {
   creating_ai,
   education_for_all,
   fintegrate_demo,
+  codemaster,
+  game_collection,
+  tastematch_galley,
   threejs,
   nvidia,
   ready,
@@ -29,6 +32,11 @@ import {
   ready_cert,
   mahat_cert,
   nvidia_diffusion_cert,
+  github,
+  leetcode,
+  gmail,
+  creatingai_white,
+  pypi_white
 } from "../assets";
 
 export const navLinks = [
@@ -172,7 +180,7 @@ const experiences = [
   },
   {
     title: "ML Blog Platform Developer",
-    company_name: "Personal Project",
+    company_name: "Personal Website",
     icon: creatingai, // החלף לאייקון רלוונטי
     iconBg: "#E6DEDD",
     date: "2025",
@@ -202,7 +210,7 @@ const experiences = [
 
 const projects = [
   {
-    name: " Education for All – Q&A Platform for Parents and Counselors",
+    name: "🎓 Education for All – Q&A Platform for Parents and Counselors",
     description:
       "Education for All is a full-stack platform designed to connect parents with professional educational guidance. Its backend, powered by a secure C# ASP.NET Web API and SQL Server, handles Q&A management, authentication, and real-time counselor responses. On the frontend, a sleek React app enhanced by a built-in FAQ chatbot, audio playback of clustered answers via Azure Speech Services, and voice-based response input.",
     tags: [
@@ -211,7 +219,7 @@ const projects = [
         color: "blue-text-gradient",
       },
       {
-        name: "c# asp.net",
+        name: "asp.net core",
         color: "green-text-gradient",
       },
       {
@@ -219,16 +227,56 @@ const projects = [
         color: "pink-text-gradient",
       },
       {
-        name: "azure",
+        name: "azure speech",
         color: "orange-text-gradient",
       },
     ],
-    image: education_for_all, 
-    source_code_link: "https://github.com/efrat-dev", 
-    demo_link: "https://education-forall.onrender.com", 
+    image: education_for_all,
+    source_code_links: [
+      {
+        name: "Frontend",
+        url: "https://github.com/efrat-dev/education-for-all-frontend"
+      },
+      {
+        name: "Backend", 
+        url: "https://github.com/efrat-dev/education-for-all-backend"
+      }
+    ],
+    demo_link: "https://education-forall.onrender.com",
   },
   {
-    name: "TasteMatch – Recipe Sharing Experience 🍽️",
+    name: "🤖 Creating AI - Learning Platform & Blog",
+    description:
+      "Creating AI is an interactive learning platform and personal tech blog, built to document and share my hands-on journey into AI and data science. It features live code editing, in-browser execution, and notebook-style rendering for a dynamic, immersive experience. Built with Node.js, JavaScript, and Angular, it transforms static content into an engaging space for exploration. Perfect for developers who want to learn by doing — not just reading.",
+    tags: [
+      {
+        name: "angular",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "node.js",
+        color: "green-text-gradient",
+      },
+      {
+        name: "machine learning",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "jupyter",
+        color: "orange-text-gradient",
+      },
+    ],
+    image: creating_ai,
+    source_code_links: [
+      {
+        name: "Source Code",
+        url: "https://github.com/efrat-dev/creating-ai-blog"
+      }
+    ],
+    demo_link: "https://creatingai.onrender.com",
+  },
+  {
+    name: "🍽️ TasteMatch – Recipe Sharing Experience",
     description:
       "TasteMatch is a vibrant, fully responsive recipe-sharing website crafted with semantic HTML, modern CSS, and Bootstrap. Designed as a front-end showcase, it blends elegant UI design with smooth animations — creating an experience that feels dynamic, even without a backend. Whether you're craving something sweet, savory, or simply stylish code, this project serves up the perfect taste of front-end excellence.",
     tags: [
@@ -249,111 +297,110 @@ const projects = [
         color: "orange-text-gradient",
       },
     ],
-    image: education_for_all, 
-    source_code_link: "https://github.com/efrat-dev", 
-    demo_link: "https://education-for-all.onrender.com", 
+    image: tastematch_galley,
+    source_code_links: [
+      {
+        name: "Source Code",
+        url: "https://github.com/efrat-dev/tastematch-recipe-sharing-platform"
+      }
+    ],
+    demo_link: "https://efrat-dev.github.io/tastematch-recipe-sharing-platform/",
   },
   {
-    name: "Next-Gen Developer Showcase",
+    name: "🎮 Game Collection - Small Games, Big Impact",
+    description:
+      "A vibrant collection of mini-games — each one offering a different flavor of fun, challenge, and creativity. Don't miss our flagship - Mastermind! Sharpen your logic by cracking a secret sequence of colors, complete with difficulty levels, live timer, and high-score tracking. Other games: Triluck – A colorful slot machine. Brush Rush – Your personal pixel-art playground.",
+    tags: [
+      {
+        name: "javascript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "html5",
+        color: "green-text-gradient",
+      },
+      {
+        name: "css3",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "game logic",
+        color: "orange-text-gradient",
+      },
+    ],
+    image: game_collection,
+    source_code_links: [
+      {
+        name: "Source Code",
+        url: "https://github.com/efrat-dev/game-collection"
+      }
+    ],
+    demo_link: "https://efrat-dev.github.io/game-collection",
+  },
+  {
+    name: "💻 CodeMaster - Leetcode Solution Hub",
+    description:
+      "A sleek, web-based platform that showcases my structured LeetCode solutions — searchable, categorized by topic and difficulty, and beautifully organized for clarity and efficiency. Built for interview prep and daily revision, it combines clean UI with interactive browsing, turning a personal coding journey into a polished learning tool.",
+    tags: [
+      {
+        name: "algorithms",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "data structures",
+        color: "green-text-gradient",
+      },
+      {
+        name: "problem solving",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "optimization",
+        color: "orange-text-gradient",
+      },
+    ],
+    image: codemaster,
+    source_code_links: [
+      {
+        name: "Source Code",
+        url: "https://github.com/efrat-dev/leetcode-solutions-hub"
+      }
+    ],
+    demo_link: "https://efrat-dev.github.io/leetcode-solutions-hub/",
+  },
+  {
+    name: "🚀 Next-Gen Developer Showcase",
     description:
       "This interactive template was built to present my professional experience and achievements in a striking, user-friendly format. Designed for developers who want to stand out, tell their story visually, and leave a lasting impression — before a single line of code is even read.",
     tags: [
       {
-        name: "nestjs",
-        color: "red-text-gradient",
-      },
-      {
-        name: "react",
+        name: "full stack",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-    ],
-    image: fintegrate_demo, 
-    source_code_link: "https://github.com/efrat-dev/fintegrate-demo", 
-    demo_link: "https://extrateck-demo.com",
-  },
-  {
-    name: "Creating AI - Learning Platform & Blog",
-    description:
-    "Creating AI is an interactive learning platform and personal tech blog, built to document and share my hands-on journey into AI and data science. It features live code editing, in-browser execution, and notebook-style rendering for a dynamic, immersive experience. Built with Node.js, JavaScript, and Angular, it transforms static content into an engaging space for exploration. Perfect for developers who want to learn by doing — not just reading.",
-    tags: [
-      {
-        name: "nodejs",
+        name: "presentation",
         color: "green-text-gradient",
       },
       {
-        name: "javascript",
-        color: "yellow-text-gradient",
+        name: "slides",
+        color: "pink-text-gradient",
       },
       {
-        name: "angular",
-        color: "red-text-gradient",
-      },
-      {
-        name: "ai & ml ",
-        color: "red-text-gradient",
+        name: "documentation",
+        color: "orange-text-gradient",
       },
     ],
-    image: creating_ai, // החלף בתמונה מתאימה
-    source_code_link: "https://github.com/efrat-dev/creating-ai-blog", // הכנס את הקישור לקוד שלך
-    demo_link: "https://creatingai.onrender.com",
-  },
-  {
-    name: "Creating AI - Learning Platform & Blog",
-    description:
-    "A vibrant collection of mini-games — each one offering a different flavor of fun, challenge, and creativity. Small games, big impact. Don't miss our flagship - Mastermind! Sharpen your logic by cracking a secret sequence of colors, complete with difficulty levels, live timer, and high-score tracking. Other games: Triluck – A colorful slot machine. Brush Rush – Your personal pixel-art playground.",
-    tags: [
+    image: fintegrate_demo,
+    source_code_links: [
       {
-        name: "nodejs",
-        color: "green-text-gradient",
-      },
-      {
-        name: "javascript",
-        color: "yellow-text-gradient",
-      },
-      {
-        name: "angular",
-        color: "red-text-gradient",
-      },
-      {
-        name: "ai & ml ",
-        color: "red-text-gradient",
-      },
+        name: "Source Code",
+        url: "https://github.com/efrat-dev/fintegrate-demo"
+      }
     ],
-    image: creating_ai, // החלף בתמונה מתאימה
-    source_code_link: "https://github.com/efrat-dev/creating-ai-blog", // הכנס את הקישור לקוד שלך
-    demo_link: "https://creatingai.onrender.com",
-  },
-  {
-    name: "Creating AI - Learning Platform & Blog",
-    description:
-    "A sleek, web-based platform that showcases my structured LeetCode solutions — searchable, categorized by topic and difficulty, and beautifully organized for clarity and efficiency. Built for interview prep and daily revision, it combines clean UI with interactive browsing, turning a personal coding journey into a polished learning tool.",
-    tags: [
-      {
-        name: "nodejs",
-        color: "green-text-gradient",
-      },
-      {
-        name: "javascript",
-        color: "yellow-text-gradient",
-      },
-      {
-        name: "angular",
-        color: "red-text-gradient",
-      },
-      {
-        name: "ai & ml ",
-        color: "red-text-gradient",
-      },
-    ],
-    image: creating_ai, 
-    source_code_link: "https://github.com/efrat-dev/creating-ai-blog", 
-    demo_link: "https://creatingai.onrender.com",
+    demo_link: "https://efrat-dev.github.io/fintegrate-demo/",
   },
 ];
+
 const certifications = [
   {
     name: "Diffusion Models",
@@ -430,20 +477,32 @@ const contactInfo = [
   {
     title: "GitHub",
     link: "https://github.com/efrat-dev",
-    icon: git,
+    icon: github,
     type: "link"
   },
   {
     title: "Blog",
     link: "https://creatingai.onrender.com",
-    icon: fullstack_developer,
+    icon: creatingai_white,
     type: "link"
   },
   {
     title: "Email",
     link: "#contact",
-    icon: data_scientist,
+    icon: gmail,
     type: "scroll"
+  },
+  {
+    title: "PyPi",
+    link: "https://pypi.org/user/efrat-dev/",
+    icon: pypi_white,
+    type: "link"
+  },
+  {
+    title: "LeetCode",
+    link: "https://leetcode.com/u/efrat-dev/",
+    icon: leetcode,
+    type: "link"
   }
 ];
 
@@ -497,82 +556,6 @@ const mlDeepLearningProjects = [
     ],
     image: education_for_all,
     source_code_link: "https://github.com/efrat-dev/customer-segmentation",
-  },
-  {
-    name: "Stock Price Prediction Model",
-    description:
-      "Time series forecasting model using LSTM neural networks to predict stock prices. Implemented with TensorFlow and Keras, featuring data preprocessing, model training, and real-time prediction capabilities with 85% accuracy on test data.",
-    tags: [
-      {
-        name: "tensorflow",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "lstm",
-        color: "green-text-gradient",
-      },
-      {
-        name: "deep-learning",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "keras",
-        color: "red-text-gradient",
-      },
-    ],
-    image: creating_ai,
-    source_code_link: "https://github.com/efrat-dev/stock-prediction",
-    demo_link: "https://stock-predictor-demo.onrender.com",
-  },
-  {
-    name: "Fraud Detection System",
-    description:
-      "Machine learning model for detecting fraudulent transactions using ensemble methods and anomaly detection. Achieves 96% precision with XGBoost and Random Forest, includes feature engineering and real-time scoring pipeline.",
-    tags: [
-      {
-        name: "xgboost",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "anomaly-detection",
-        color: "green-text-gradient",
-      },
-      {
-        name: "ensemble",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "scikit-learn",
-        color: "red-text-gradient",
-      },
-    ],
-    image: education_for_all,
-    source_code_link: "https://github.com/efrat-dev/fraud-detection",
-  },
-  {
-    name: "Sales Forecasting Analytics",
-    description:
-      "Comprehensive sales forecasting solution using multiple time series models (ARIMA, Prophet, LSTM). Features automated model selection, seasonal decomposition, and business intelligence dashboard for strategic planning.",
-    tags: [
-      {
-        name: "prophet",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "arima",
-        color: "green-text-gradient",
-      },
-      {
-        name: "forecasting",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "plotly",
-        color: "orange-text-gradient",
-      },
-    ],
-    image: creating_ai,
-    source_code_link: "https://github.com/efrat-dev/sales-forecasting",
   },
   {
     name: "Recommendation Engine",
