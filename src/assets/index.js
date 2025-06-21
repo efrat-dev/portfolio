@@ -1,12 +1,19 @@
 import logo from "./logo.svg";
-import backend from "./backend.png";
-import creator from "./creator.png";
-import mobile from "./mobile.png";
-import web from "./web.png";
+import content_creator from "./services/content-creator.png";
+import data_scientist from "./services/data-scientist.png";
+import fullstack_developer from "./services/fullstack-developer.png";
+import ai_developer from "./services/ai-developer.png"
+import open_source_contributor from "./services/open-source-contributor.png"
+
+import gmail from "./contact/gmail-white.png"
+import leetcode from "./contact/leetcode-white.png"
+import creatingai_white from "./contact/creatingai-white.png"
+import pypi_white from "./contact/pypi-white.png"
+
+import pypi from "./pypi.png"
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
-import pypi from "./pypi.png"
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -22,14 +29,16 @@ import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
+import extratech from "./company/extratech.png"
+import creatingai from "./company/creatingai.png"
+import startuplift from "./company/startuplift.png";
 
 import creating_ai from "./projects/creating-ai.png";
-import education_for_all from "./projects/education-for-all.png";
+import education_for_all from "./projects/education-forall.png";
 import fintegrate_demo from "./projects/fintegrate-demo.png";
+import codemaster from "./projects/codemaster.png"
+import game_collection from "./projects/game-collection.png"
+import tastematch_galley from "./projects/tastematch-gallery.png"
 
 import nvidia from "./issuer/nvidia.png";
 import ready from "./issuer/ready.png";
@@ -41,12 +50,17 @@ import mahat_cert from "./certificate/mahat-cert.png"
 
 export {
   logo,
-  backend,
-  creator,
-  mobile,
-  web,
+  content_creator,
+  data_scientist,
+  fullstack_developer,
+  ai_developer,
+  open_source_contributor,
   github,
+  pypi_white,
   pypi,
+  gmail,
+  creatingai_white,
+  leetcode,
   menu,
   close,
   css,
@@ -62,13 +76,15 @@ export {
   tailwind,
   typescript,
   threejs,
-  meta,
-  shopify,
-  starbucks,
-  tesla,
+  creatingai,
+  extratech,
+  startuplift,
   creating_ai,
   education_for_all,
   fintegrate_demo,
+  codemaster,
+  game_collection,
+  tastematch_galley,
   nvidia,
   mahat,
   ready,
