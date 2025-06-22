@@ -83,4 +83,4 @@ const Achievements = () => {
   );
 };
 
-export default SectionWrapper(Achievements, "certificates");
+export default SectionWrapper(Achievements, "certifications");

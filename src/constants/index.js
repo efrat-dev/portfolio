@@ -73,8 +73,8 @@ export const navLinks = [
     title: "Data Science",
   },
   {
-    id: "certificates",
-    title: "Certificates",
+    id: "certifications",
+    title: "Certifications",
   },
   {
     id: "contact",
