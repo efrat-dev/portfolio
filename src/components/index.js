@@ -4,7 +4,7 @@ import Home from './Home';
 import About from "./About";
 import Tech from "./Tech";
 import Experience from "./Experience";
-import Works from "./Works";
+import Projects from "./Projects";
 import Certifications from './Certifications';
 import Contact from "./Contact";
 import Footer from "./Footer"
@@ -19,7 +19,7 @@ export {
   About,
   Tech,
   Experience,
-  Works,
+  Projects,
   Certifications,
   Contact,
   CanvasLoader,
