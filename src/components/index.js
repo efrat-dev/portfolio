@@ -5,11 +5,13 @@ import About from "./About";
 import Tech from "./Tech";
 import Experience from "./Experience";
 import Works from "./Works";
-import Achievements from './Achievements';
+import Certifications from './Certifications';
 import Contact from "./Contact";
 import Footer from "./Footer"
 import CanvasLoader from "./Loader";
 import OpenSourceWorks from './OpenSourceWorks';
+import DataScience from './DataScience';
+import Blog from './Blog';
 
 export {
   Navbar,
@@ -18,11 +20,13 @@ export {
   Tech,
   Experience,
   Works,
-  Achievements,
+  Certifications,
   Contact,
   CanvasLoader,
   EarthCanvas, 
   StarsCanvas,
   Footer,
-  OpenSourceWorks
+  OpenSourceWorks,
+  DataScience,
+  Blog
 };

@@ -1,7 +1,6 @@
 import React from "react";
 import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
-import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { certifications } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
@@ -66,7 +65,7 @@ const CertificationCard = ({
   );
 };
 
-const Achievements = () => {
+const Certifications = () => {
   return (
     <>
       <motion.div variants={textVariant()} className="text-center mb-10">
@@ -83,4 +82,4 @@ const Achievements = () => {
   );
 };
 
-export default SectionWrapper(Achievements, "certifications");
+export default SectionWrapper(Certifications, "certifications");
