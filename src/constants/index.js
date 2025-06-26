@@ -498,7 +498,7 @@ const contactInfo = [
     type: "scroll"
   },
   {
-    title: "PyPi",
+    title: "PyPI",
     link: "https://pypi.org/user/efrat-dev/",
     icon: pypi_white,
     type: "link"
