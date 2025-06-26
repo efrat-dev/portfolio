@@ -9,6 +9,7 @@ import gmail from "./contact/gmail-white.png"
 import leetcode from "./contact/leetcode-white.png"
 import creatingai_white from "./contact/creatingai-white.png"
 import pypi_white from "./contact/pypi-white.png"
+import huggingface from "./contact/huggingface.png"
 
 import pypi from "./pypi.png"
 import github from "./github.png";
@@ -40,6 +41,11 @@ import codemaster from "./projects/codemaster.png"
 import game_collection from "./projects/game-collection.png"
 import tastematch_galley from "./projects/tastematch-gallery.png"
 
+import domain_knowledge from "./blog-posts/domain-knowledge.png";
+import kaggle from "./blog-posts/kaggle.png";
+import pandas_numpy from "./blog-posts/pandas-numpy.png";
+import rcsb_pdb_dataset from "./blog-posts/rcsb_pdb-dataset.png";
+
 import nvidia from "./issuer/nvidia.png";
 import ready from "./issuer/ready.png";
 import mahat from "./issuer/mahat.png";
@@ -61,6 +67,7 @@ export {
   gmail,
   creatingai_white,
   leetcode,
+  huggingface,
   menu,
   close,
   css,
@@ -85,6 +92,10 @@ export {
   codemaster,
   game_collection,
   tastematch_galley,
+  domain_knowledge,
+  kaggle,
+  pandas_numpy,
+  rcsb_pdb_dataset,
   nvidia,
   mahat,
   ready,

@@ -26,6 +26,10 @@ import {
   game_collection,
   tastematch_galley,
   threejs,
+  domain_knowledge,
+  kaggle,
+  pandas_numpy,
+  rcsb_pdb_dataset,
   nvidia,
   ready,
   mahat,
@@ -34,6 +38,7 @@ import {
   nvidia_diffusion_cert,
   github,
   leetcode,
+  huggingface,
   gmail,
   creatingai_white,
   pypi_white
@@ -499,6 +504,12 @@ const contactInfo = [
     type: "link"
   },
   {
+    title: "Hugging Face",
+    link: "https://huggingface.co/efrat-dev",
+    icon: huggingface,
+    type: "link"
+  },
+  {
     title: "LeetCode",
     link: "https://leetcode.com/u/efrat-dev/",
     icon: leetcode,
@@ -719,8 +730,8 @@ const blogPosts = [
     readTime: "8 min read",
     date: "2024-06-15",
     category: "Deep Learning",
-    url: "/blog/transformer-architecture-deep-dive", // Changed from slug to url
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=230&fit=crop&crop=center"
+    url: "https://creatingai.onrender.com/post-list/%D7%94%D7%A1%D7%A4%D7%A8%D7%99%D7%95%D7%AA-pandas-numpy",
+    image: domain_knowledge,
   },
   {
     id: 2,
@@ -730,7 +741,7 @@ const blogPosts = [
     date: "2024-06-10",
     category: "MLOps",
     url: "/blog/scalable-ml-pipelines",
-    image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=400&h=230&fit=crop&crop=center"
+    image: rcsb_pdb_dataset,
   },
   {
     id: 3,
@@ -740,7 +751,7 @@ const blogPosts = [
     date: "2024-06-05",
     category: "Computer Vision",
     url: "/blog/computer-vision-pytorch",
-    image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&h=230&fit=crop&crop=center"
+    image: pandas_numpy,
   },
   {
     id: 4,
@@ -750,28 +761,8 @@ const blogPosts = [
     date: "2024-05-28",
     category: "Data Science",
     url: "/blog/time-series-forecasting",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=230&fit=crop&crop=center"
+    image: kaggle,
   },
-  {
-    id: 5,
-    title: "Natural Language Processing with Transformers",
-    description: "Advanced NLP techniques using pre-trained transformers for sentiment analysis, text generation, and question answering.",
-    readTime: "14 min read",
-    date: "2024-05-20",
-    category: "NLP",
-    url: "/blog/nlp-transformers",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=230&fit=crop&crop=center"
-  },
-  {
-    id: 6,
-    title: "Reinforcement Learning Fundamentals",
-    description: "Introduction to RL concepts, Q-learning algorithms, and building intelligent agents for game environments.",
-    readTime: "11 min read",
-    date: "2024-05-15",
-    category: "Reinforcement Learning",
-    url: "/blog/reinforcement-learning-fundamentals",
-    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=230&fit=crop&crop=center"
-  }
 ];
 
 // עדכן את הייצואים בסוף הקובץ:
